@@ -17,7 +17,7 @@ class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='orders')  # Link order to a customer
     item = models.CharField(max_length=100)  # Order item name
     amount = models.DecimalField(max_digits=10, decimal_places=2)  # Order amount
-    created_at = models.DateTimeField(auto_now_add=True)  # Order creation time
+    time = models.DateTimeField(auto_now_add=True)  # Order creation time
 
     def __str__(self):
         return f"{self.item} - {self.customer.name}"
