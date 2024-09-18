@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-eqfrf-ge!z8)*!ak_)k&991c_#@mx!&ia(fayh$%3g3qnbv%bx'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     'api', # the app to handle the customers and orders functionalities 
     'openId.apps.OpenidConfig',  # for the OpenID authentication
-    
+
     'rest_framework',  # for the REST API
 
 ]
