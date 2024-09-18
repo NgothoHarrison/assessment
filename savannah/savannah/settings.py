@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'savannah.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.bakends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': config('DATABASE_NAME'),
         'USER': config('DATABASE_USER'),
         'PASSWORD': config('DATABASE_PASSWORD'),
