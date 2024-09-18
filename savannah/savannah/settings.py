@@ -46,25 +46,16 @@ INSTALLED_APPS = [
 
     'rest_framework',  # for the REST API
 
+# Third party google app authentication
     'django.contrib.sites',  # Required by allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
+
 ]
 
-# MIDDLEWARE = [
-#     'django.middleware.security.SecurityMiddleware',
-#     'django.contrib.sessions.middleware.SessionMiddleware',
-#     'django.middleware.common.CommonMiddleware',
-#     'django.middleware.csrf.CsrfViewMiddleware',
-#     'django.contrib.auth.middleware.AuthenticationMiddleware',
-#     'django.contrib.messages.middleware.MessageMiddleware',
-#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-#     'allauth.account.middleware.AuthenticationMiddleware',  # Required by allauth
-# ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -74,8 +65,31 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
     'allauth.account.middleware.AccountMiddleware',  # Required by allauth
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'CLIENT_ID': config('GOOGLE_CLIENT_ID'),
+        'CLIENT_SECRET': config('GOOGLE_CLIENT_SECRET'),
+        'SCOPE': [ 
+            'profile', 
+            'email', 
+        ],
+        'AUTH_PARAMS': { 
+            'access_type': 'online', # This is the access type
+        },
+        'OAUTH_PKCE_ENABLED': True, # This is the PKCE, it helps to prevent code interception
+    } 
+}
+
+
+
+LOGIN_REDIRECT_URL = '/api/orders/' # The URL to redirect to after a successful login
+LOGOUT_REDIRECT_URL = '/accounts/' # The URL to redirect to after a successful logout
+
+
 
 ROOT_URLCONF = 'savannah.urls'
 

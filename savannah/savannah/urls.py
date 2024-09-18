@@ -23,4 +23,5 @@ urlpatterns = [
     # path('account/', include('openId.urls')),
     path('accounts/', include('allauth.urls')),
     path('auth/', include('rest_framework.urls')),
+    path('auth/', include('openId.urls')),
 ]
