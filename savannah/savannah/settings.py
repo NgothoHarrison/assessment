@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'api', # the app to handle the customers and orders functionalities 
+    'openId.apps.OpenidConfig',  # for the OpenID authentication
+    
+    'rest_framework',  # for the REST API
+
 ]
 
 MIDDLEWARE = [
@@ -83,6 +89,18 @@ DATABASES = {
         'HOST': config('DATABASE_HOST', default='localhost'),
         'PORT': config('DATABASE_PORT', default='5432'),
     }   
+}
+
+# Rest framework settings for authentication and permissions
+
+REST_FRAMEWORK = {  
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
 }
 
 
