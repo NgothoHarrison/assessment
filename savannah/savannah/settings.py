@@ -90,8 +90,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 
 
-LOGIN_REDIRECT_URL = '/api/orders/' # The URL to redirect to after a successful login
-LOGOUT_REDIRECT_URL = '/' # The URL to redirect to after a successful logout
+LOGIN_REDIRECT_URL = '/api/orders/create/' # The URL to redirect to after a successful login
+LOGOUT_REDIRECT_URL = '/auth/customer/' # The URL to redirect to after a successful logout
 
 
 
