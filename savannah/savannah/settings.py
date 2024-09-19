@@ -71,8 +71,6 @@ MIDDLEWARE = [
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        'CLIENT_ID': config('GOOGLE_CLIENT_ID'),
-        'CLIENT_SECRET': config('GOOGLE_CLIENT_SECRET'),
         'SCOPE': [ 
             'profile', 
             'email', 
@@ -81,12 +79,18 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online', # This is the access type
         },
         'OAUTH_PKCE_ENABLED': True, # This is the PKCE, it helps to prevent code interception
+        'APP': {
+            'client_id': config('GOOGLE_CLIENT_ID'),
+            'secret': config('GOOGLE_CLIENT_SECRET'),
+            'key': ''
+        }
+    }
     } 
-}
 
 
 
-LOGIN_REDIRECT_URL = '/' # The URL to redirect to after a successful login
+
+LOGIN_REDIRECT_URL = '/api/orders/' # The URL to redirect to after a successful login
 LOGOUT_REDIRECT_URL = '/' # The URL to redirect to after a successful logout
 
 
