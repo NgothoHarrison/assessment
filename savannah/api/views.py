@@ -108,6 +108,7 @@ from rest_framework.exceptions import NotFound
 from .models import Order
 from .serializers import OrderSerializer
 from openId.models import Customer
+from .utils import send_sms
 
 class OrderListCreateView(generics.ListCreateAPIView):
     serializer_class = OrderSerializer
@@ -128,6 +129,13 @@ class OrderListCreateView(generics.ListCreateAPIView):
         # Set the customer field automatically when creating an order
         customer = Customer.objects.get(user=self.request.user)
         serializer.save(customer=customer)
+
+        # Send an SMS notification to the customer
+        order = serializer.instance # The newly created order
+        message = f"Dear {customer.name}, your order for {order.item}, Amount: {order.amount} has been received."
+
+        # Send the SMS
+        send_sms(customer.phone_number, message)
 
 class OrderDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = OrderSerializer
