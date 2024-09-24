@@ -132,7 +132,8 @@ class OrderListCreateView(generics.ListCreateAPIView):
 
         # Send an SMS notification to the customer
         order = serializer.instance # The newly created order
-        message = f"Dear {customer.name}, your order for {order.item}, Amount: {order.amount} has been received."
+        
+        message = f"Dear {customer.name}, your order for {order.item}, Amount: {order.amount} has been created."
 
         # Send the SMS
         send_sms(customer.phone_number, message)

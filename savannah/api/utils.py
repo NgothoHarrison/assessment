@@ -31,8 +31,9 @@ africastalking.initialize(
 sms = africastalking.SMS 
 
 def send_sms(phone_number, message):
+   
     try:
-        response = sms.send(message, [phone_number])
+        response = sms.send(message, [phone_number]) 
         # Check if the response indicates success
         if response['status'] == 'success':
             print(f"SMS sent successfully to {phone_number}: {response}")
