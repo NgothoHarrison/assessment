@@ -87,8 +87,10 @@ SOCIALACCOUNT_PROVIDERS = {
     }
     } 
 
-
-
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 LOGIN_REDIRECT_URL = '/api/orders/create/' # The URL to redirect to after a successful login
 LOGOUT_REDIRECT_URL = '/auth/customer/' # The URL to redirect to after a successful logout
