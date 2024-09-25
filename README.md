@@ -56,6 +56,46 @@ Welcome to the Savannah API! This RESTful API is designed to manage customer and
    git clone https://github.com/NgothoHarrison/assessment.git
    cd assessment
 2. Create and activate a virtual environment:
-```bash
+    ```bash
     python -m venv .venv
     source .venv\Scripts\activate
+3. Install the required packages:
+
+   ```bash
+   pip install -r requirements.txt
+4. Environment variables:
+   ```bash
+   Create a .env file in the root directory of your project and add the following variables:
+
+5. Database setup:
+   ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+Create a superuser for accessing the admin panel:
+    ```bash
+    python manage.py createsuperuser
+Run the development server:
+```bash
+python manage.py runserver
+
+# API Endpoints
+
+## Authentication
+- **Login**: `POST /auth/login/`
+- **Logout**: `POST /auth/logout/`
+- **Register**: `POST /auth/accounts/signup/`
+
+## Customers
+- **List all customers**: `GET /api/customers/`
+- **Create a customer**: `POST /api/customers/create/`
+- **Retrieve a customer**: `GET /api/customers/<int:pk>/`
+- **Update a customer**: `PUT /api/customers/<int:pk>/update/`
+- **Delete a customer**: `DELETE /api/customers/<int:pk>/delete/`
+- **User profile**: `GET /auth/profile/`
+
+## Orders
+- **List all orders**: `GET /api/orders/`
+- **Create an order**: `POST /api/orders/create/`
+- **Retrieve an order**: `GET /api/orders/<int:order_id>/`
+- **Update an order**: `PUT /api/orders/<int:order_id>/update/`
+- **Delete an order**: `DELETE /api/orders/<int:order_id>/delete/`
