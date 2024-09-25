@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False   # set to False for production
 
-ALLOWED_HOSTS = ['.vercel.app','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['','localhost','127.0.0.1']
 
 SITE_ID = 1 # Required by allauth
 
