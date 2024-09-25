@@ -46,6 +46,9 @@ INSTALLED_APPS = [
 
     'rest_framework',  # for the REST API
 
+    'drf_yasg',  # for the API documentation
+    
+
 # Third party google app authentication
     'django.contrib.sites',  # Required by allauth
     'allauth',
