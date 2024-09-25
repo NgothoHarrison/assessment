@@ -99,3 +99,7 @@ python manage.py runserver
 - **Retrieve an order**: `GET /api/orders/<int:order_id>/`
 - **Update an order**: `PUT /api/orders/<int:order_id>/update/`
 - **Delete an order**: `DELETE /api/orders/<int:order_id>/delete/`
+
+# documentation 
+- `GET /swagger/ 
+- `GET /redoc/
