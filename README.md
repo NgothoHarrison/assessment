@@ -45,7 +45,7 @@ Welcome to the Savannah API! This RESTful API is designed to manage customer and
 
 - Python 3.x
 - pip
-- PostgreSQL or any preferred database
+- PostgreSQL
 - Virtual environment (recommended)
 
 ### Installation
@@ -53,5 +53,9 @@ Welcome to the Savannah API! This RESTful API is designed to manage customer and
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/savannah-api.git
-   cd savannah-api
+   git clone https://github.com/NgothoHarrison/assessment.git
+   cd assessment
+2. Create and activate a virtual environment:
+```bash
+    python -m venv .venv
+    source .venv\Scripts\activate
