@@ -2,15 +2,12 @@
     "version": 2,
     "builds": [
       {
-        "src": "assessment/savannah/savannah/wsgi.py", 
+        "src": "savannah/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "wsgi.py"
-      }
+      { "src": "/(.*)", "dest": "savannah/wsgi.py" }
     ]
   }
   

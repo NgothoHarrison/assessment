@@ -14,3 +14,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'savannah.settings')
 
 application = get_wsgi_application()
+
+app = application # this is to allow the application to be accessed from the main project folder
