@@ -105,6 +105,7 @@ python manage.py runserver
 ## documentation 
 - `GET /swagger/ `
 - `GET /redoc/`
+
 ![Screenshot](https://github.com/NgothoHarrison/assessment/blob/main/screenshots/Screenshot%202024-09-25%20141819.png)
 
 ## License 
