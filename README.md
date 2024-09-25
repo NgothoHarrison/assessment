@@ -2,7 +2,7 @@
 
 Welcome to the Savannah API! This RESTful API is designed to manage customer and order data, providing authentication, user profiles, and SMS notifications. 
 
-![Screenshot](screenshots/Screenshot 2024-09-25 141819.png)
+https://github.com/NgothoHarrison/assessment/blob/main/screenshots/Screenshot%202024-09-25%20141819.png
 ## Table of Contents
 
 - [Features](#features)
