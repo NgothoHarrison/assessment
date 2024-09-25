@@ -78,7 +78,7 @@ Run the development server:
 ```bash
 python manage.py runserver
 
-# API Endpoints
+### API Endpoints
 
 ## Authentication
 - **Login**: `POST /auth/login/`
@@ -100,6 +100,9 @@ python manage.py runserver
 - **Update an order**: `PUT /api/orders/<int:order_id>/update/`
 - **Delete an order**: `DELETE /api/orders/<int:order_id>/delete/`
 
-# documentation 
-- `GET /swagger/ 
-- `GET /redoc/
+## documentation 
+- `GET /swagger/ `
+- `GET /redoc/`
+
+## License 
+[MIT](https://choosealicense.com/licenses/mit/)
