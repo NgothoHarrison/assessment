@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','localhost','127.0.0.1']
 
 SITE_ID = 1 # Required by allauth
 
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',  # for the REST API
 
     'drf_yasg',  # for the API documentation
-    
+
 
 # Third party google app authentication
     'django.contrib.sites',  # Required by allauth
