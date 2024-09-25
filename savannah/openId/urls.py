@@ -1,7 +1,7 @@
 from django.urls import path, include
 from .views import *
 urlpatterns = [
-    path('accounts/', include('allauth.urls')),
+    path('', include('allauth.urls')),
 
     path('customers/', CustomerListCreateView.as_view(), name='customer'),
     path('customers/create/', CustomerCreateView.as_view(), name='customer'),
