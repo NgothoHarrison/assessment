@@ -105,7 +105,7 @@ python manage.py runserver
 ## documentation 
 - `GET /swagger/ `
 - `GET /redoc/`
-![Screenshot](screenshots/sms screenshot.png)
+![Screenshot](screenshots/sms_screenshot.png)
 
 ## License 
 [MIT](https://choosealicense.com/licenses/mit/)
