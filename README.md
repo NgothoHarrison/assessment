@@ -2,6 +2,7 @@
 
 Welcome to the Savannah API! This RESTful API is designed to manage customer and order data, providing authentication, user profiles, and SMS notifications. 
 
+![Screenshot](screenshots/Screenshot 2024-09-25 141819.png)
 ## Table of Contents
 
 - [Features](#features)
@@ -79,6 +80,7 @@ Run the development server:
 python manage.py runserver
 
 ### API Endpoints
+![Screenshot](screenshots/Screenshot 2024-09-25 141844.png)
 
 ## Authentication
 - **Login**: `POST /auth/login/`
@@ -103,6 +105,7 @@ python manage.py runserver
 ## documentation 
 - `GET /swagger/ `
 - `GET /redoc/`
+![Screenshot](screenshots/sms screenshot.png)
 
 ## License 
 [MIT](https://choosealicense.com/licenses/mit/)
