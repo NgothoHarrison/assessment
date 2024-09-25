@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from decouple import config # module is used to store sensitive information in a .env file
 
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -134,6 +136,9 @@ DATABASES = {
         'PORT': config('DATABASE_PORT', default='5432'),
     }   
 }
+
+DATABASES['default'] = dj_database_url.parse("postgresql://admin:6yAuqxKgd4ImP3aNvVynT27I6daI1OEa@dpg-crpvokogph6c73a4jvc0-a.oregon-postgres.render.com/assessment_4wah")
+# postgresql://admin:6yAuqxKgd4ImP3aNvVynT27I6daI1OEa@dpg-crpvokogph6c73a4jvc0-a.oregon-postgres.render.com/assessment_4wah
 
 # Rest framework settings for authentication and permissions
 
